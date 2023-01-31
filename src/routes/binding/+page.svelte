@@ -1,8 +1,5 @@
 <script>
+	import Binding from './value/+page.svelte';
 </script>
 
-
-<h1>Binding</h1>
-
-<style>
-</style>
+<Binding />
