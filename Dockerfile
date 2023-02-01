@@ -1,22 +1,15 @@
+# Dockerfile
+
 FROM node:16-alpine
 
-# install simple http server for serving static content
-RUN npm install -g http-server
+RUN npm install -g pnpm
 
-# make the 'app' folder the current working directory
 WORKDIR /app
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
-# copy both 'package.json' and 'package-lock.json' (if available)
-COPY package*.json ./
-
-# install project dependencies
-RUN npm install
-
-# copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
-
-# build app for production with minification
-RUN npm run buils
+RUN pnpm build
 
 EXPOSE 3000
 CMD ["node", "build"]
