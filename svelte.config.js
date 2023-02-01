@@ -11,7 +11,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		 adapter: adapterNode()
+		 adapter: adapter()
 
 
 		// adapter: adapterMulti([
