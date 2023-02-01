@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  svelte-web:
+    build: .
+    image: svelte-web:1.0.0
+    ports:
+      - 4000:8080
+    container_name: svelte-web-prd
