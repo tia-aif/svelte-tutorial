@@ -1,18 +1,15 @@
 # Dockerfile
 
-FROM node:16-alpine as build
+FROM node:18-alpine as deploy-node
 
 
 RUN npm 
 
 WORKDIR /app
+RUN rm -rf ./*
+COPY --from=build /app/package.json .
+COPY --from=build /app/build .
 
-COPY . .
+RUN npx yarn --prod
 
-RUN npm build
-FROM nginx:1.18-alpine as deploy-static
-
-WORKDIR /usr/share/nginx/html
-RUN rm -rf .;*
-COPY --from==build /app/build .
-ENTRYPOINT ["nginx","-g","daemon off;"]
+CMD ["node","index.js"]

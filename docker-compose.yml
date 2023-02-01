@@ -1,11 +1,11 @@
 version: '3.9'
 
 services:
-  app-static:
-    image: svelte-docker-static
+  app-node:
+    image: svelte-docker-node
     build: 
       context: .
       dockerfile: Dockerfile
-      target: deploy-static
+      target: deploy-node
     ports:
       - 3000:80
