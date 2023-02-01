@@ -2,14 +2,14 @@
 
 FROM node:16-alpine
 
-RUN npm install -g pnpm
+RUN npm install -g http-server
 
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile
+COPY package.json ./
+RUN npm install 
 
 COPY . .
-RUN pnpm build
+RUN npm build
 
 EXPOSE 3000
 CMD ["node", "build"]
