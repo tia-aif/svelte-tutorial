@@ -19,11 +19,11 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
-RUN npm run preview
+# RUN npm run preview
 
-FROM nginx:1.19-alpine
+# FROM nginx:1.19-alpine
 
-COPY --from=build /app/public /usr/share/nginx/html
+# COPY --from=build /app/public /usr/share/nginx/html
 
 EXPOSE 8080
 CMD [ "http-server", "build" ]
