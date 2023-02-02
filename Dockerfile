@@ -20,6 +20,7 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
+RUN serve -s dist
 # RUN npm run preview
 
 # FROM nginx:1.19-alpine
