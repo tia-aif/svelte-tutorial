@@ -1397,6 +1397,11 @@
   "resolved" "https://registry.npmjs.org/playwright-core/-/playwright-core-1.30.0.tgz"
   "version" "1.30.0"
 
+"pnpm@^7.26.3":
+  "integrity" "sha512-Q/McJBmWoVmHMn5Nzf8Ty3gCPeOqq4fFbIP07Cg4Ygkvk01yu9LdXagydEHuvYIq0c/yU9+7EKeppUuuw1OX6Q=="
+  "resolved" "https://registry.npmjs.org/pnpm/-/pnpm-7.26.3.tgz"
+  "version" "7.26.3"
+
 "postcss-import@^14.1.0":
   "integrity" "sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw=="
   "resolved" "https://registry.npmjs.org/postcss-import/-/postcss-import-14.1.0.tgz"
