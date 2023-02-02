@@ -18,4 +18,4 @@ COPY . .
 RUN npm run build
 
 EXPOSE 8080
-CMD [ "http-server", ".svelte-kit" ]
+CMD [ "http-server", ".svelte-kit/generated" ]
