@@ -3,7 +3,7 @@ FROM node:16-alpine
 # install simple http server for serving static content
 RUN npm install -g http-server
 # make the 'app' folder the current working directory
-WORKDIR /index.js
+WORKDIR /src/app
 
 # copy both 'package.json' and 'package-lock.json' (if available)
 COPY package*.json ./
@@ -18,4 +18,4 @@ COPY . .
 RUN npm run build
 
 EXPOSE 8080
-CMD [ "npm", "build/index.js" ]
+CMD [ "node", "build/index.js" ]
