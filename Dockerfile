@@ -18,4 +18,4 @@ COPY . .
 RUN npm run build
 
 EXPOSE 8080
-CMD [ "http-server", "src/main.js" ]
+CMD [ "http-server", "src/app.html" ]
