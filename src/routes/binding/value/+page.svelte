@@ -59,7 +59,6 @@
 	}
 </ style>';`;
 
-
 	let html6 = `<div bind:clientWidth={w} bind:clientHeight={h}>
 	<span style="font-size: {size}px">{text}</span>
 </div>`;
@@ -136,5 +135,6 @@ let text = 'edit me';
 
 {html6}
 </pre>
+
 <style>
 </style>

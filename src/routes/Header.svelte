@@ -8,7 +8,7 @@
 <header>
 	<div class="corner">
 		<svg
-			on:click={switchDrawer}
+			on:mouseenter={switchDrawer}
 			class="pl-2 z-30 flex items-center cursor-pointer top-0"
 			fill="#99999999"
 			viewBox="0 0 100 80"

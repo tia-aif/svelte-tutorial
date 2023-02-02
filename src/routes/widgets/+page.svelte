@@ -10,12 +10,14 @@
 <div>
 	<h1>Widget this app</h1>
 	<Container>
-		<span class="text-1xl font-bold ">Hello world!  my name is Riamthoj i am frontend developer of aif group</span>
+		<span class="text-1xl font-bold "
+			>Hello world! my name is Riamthoj i am frontend developer of aif group</span
+		>
 	</Container>
 </div>
 
 <style lang="postcss">
-  /* :global(html) {
+	/* :global(html) {
     background-color: theme(colors.gray.100);
   } */
 </style>

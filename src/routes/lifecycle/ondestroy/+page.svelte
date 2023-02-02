@@ -21,7 +21,6 @@ export function onInterval(callback, milliseconds) {
 	let counter = 0;
 	onInterval(() => counter += 1, 1000);
 `;
-
 </script>
 
 <p class="text-1xl font-bold ">To run code when your component is destroyed, use onDestroy.</p>

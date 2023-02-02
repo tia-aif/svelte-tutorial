@@ -11,8 +11,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		 adapter: adapterNode()
-
+		adapter: adapterNode()
 
 		// adapter: adapterMulti([
 		// 	adapterStatic({ pages: 'build-static', assets: 'build-static', precompress: false }),

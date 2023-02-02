@@ -1,9 +1,6 @@
 <script>
-	import Container from "../../../components/Container.svelte";
-
-
+	import Container from '../../../components/Container.svelte';
 </script>
-
 
 <Container>
 	<span class="text-1xl font-bold "

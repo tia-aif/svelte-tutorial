@@ -27,9 +27,12 @@
 		&#x276E /a &#x276F &#x276E /li &#x276F
 	 &#x2774 /each &#x2775 
 &#x276E /ul &#x276F
-</pre> 
+</pre>
 
-<p class="my-3">If you prefer, you can use destructuring — each cats as &#x2774 id , name &#x2775 — and replace cat.id and cat.name with id and name.</p>
+<p class="my-3">
+	If you prefer, you can use destructuring — each cats as &#x2774 id , name &#x2775 — and replace
+	cat.id and cat.name with id and name.
+</p>
 
 <p class="my-3 text-2xl font-bold">example:</p>
 <pre class="my-2">
@@ -50,6 +53,7 @@
 		&#x276E /a &#x276F &#x276E /li &#x276F
 	 &#x2774 /each &#x2775 
 &#x276E /ul &#x276F
-</pre> 
+</pre>
+
 <style>
 </style>
