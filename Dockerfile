@@ -3,7 +3,7 @@ FROM node:16-alpine
 # install simple http server for serving static content
 RUN npm install -g http-server
 # make the 'app' folder the current working directory
-WORKDIR /src/app
+WORKDIR /src
 
 # copy both 'package.json' and 'package-lock.json' (if available)
 COPY package*.json ./
@@ -20,4 +20,4 @@ RUN npm run build
 # RUN npm run preview
 
 EXPOSE 8080
-CMD [ "http-server", "dist" ]
+CMD [ "http-server", "build" ]
