@@ -2,6 +2,7 @@ FROM node:16-alpine
 
 # install simple http server for serving static content
 RUN npm install -g http-server
+RUN npm install -g serve
 # make the 'app' folder the current working directory
 WORKDIR /app
 
@@ -26,4 +27,4 @@ RUN npm run build
 # COPY --from=build /app/public /usr/share/nginx/html
 
 EXPOSE 8080
-CMD [ "http-server", "build/client" ]
+CMD [ "http-server", "dist" ]
