@@ -17,5 +17,7 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
+RUN npm run preview
+
 EXPOSE 8080
-CMD [ "npm", "build/index.js" ]
+CMD [ "http-server", "dist" ]
