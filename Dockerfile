@@ -28,4 +28,4 @@ RUN serve -s dist
 # COPY --from=build /app/public /usr/share/nginx/html
 
 EXPOSE 8080
-CMD [ "http-server", "dist" ]
+CMD [ "http-server", "build/prerendered" ]
