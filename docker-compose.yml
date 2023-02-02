@@ -1,22 +1,9 @@
 version: '3.9'
 
-# services:
-#   app-node:
-#     image: svelte-docker-node
-#     build: 
-#       context: .
-#       dockerfile: Dockerfile
-#       target: deploy-node
-#     ports:
-#       - 3000:80
-
 services:
-  nodeserver:
-    build:
-      context: .
-    environment:
-      VIRTUAL_HOST: ${VIRTUAL_HOST}
-      VIRTUAL_PORT: ${VIRTUAL_PORT}
-      LETSENCRYPT_HOST: ${VIRTUAL_HOST}
-      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
-    restart: unless-stopped
+  svelte-deploy:
+    build: .
+    image: svelte-deploy:1.0.0
+    ports:
+      - 9001:8080
+    container_name: svelte-deploy-prd
