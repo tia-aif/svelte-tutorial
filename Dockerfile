@@ -26,4 +26,4 @@ RUN npm run build
 # COPY --from=build /app/public /usr/share/nginx/html
 
 EXPOSE 8080
-CMD [ "http-server", "build/prerendered" ]
+CMD [ "http-server", "build/client" ]
