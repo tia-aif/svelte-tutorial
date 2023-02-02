@@ -7,6 +7,7 @@ WORKDIR /app
 
 # copy both 'package.json' and 'package-lock.json' (if available)
 COPY package*.json ./
+
 COPY package-lock.json ./
 
 # install project dependencies
@@ -18,8 +19,10 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
-# RUN npm run preview
+RUN npm run preview
+
 FROM nginx:1.19-alpine
+
 COPY --from=build /app/public /usr/share/nginx/html
 
 EXPOSE 8080
