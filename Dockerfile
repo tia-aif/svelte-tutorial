@@ -2,7 +2,7 @@ FROM node:16-alpine
 
 # install simple http server for serving static content
 RUN npm install -g http-server
-RUN npm install -g serve
+# RUN npm install -g serve
 # make the 'app' folder the current working directory
 WORKDIR /app
 
@@ -20,7 +20,7 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
-RUN serve -s dist
+# RUN serve -s dist
 # RUN npm run preview
 
 # FROM nginx:1.19-alpine
